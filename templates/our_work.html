@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Work</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .our-work-section {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+
+        .our-work-section h2 {
+            font-size: 2.5rem;
+            color: #ff7a59;
+            margin-bottom: 40px;
+            font-weight: 700;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* Center-align content within the row */
+            gap: 16px; /* Add space between columns */
+        }
+
+        .column {
+            flex: 0 1 calc(25% - 16px); /* Responsive width with spacing */
+            max-width: calc(25% - 16px);
+        }
+
+        .column img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .column img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Responsive layout for tablets */
+        @media screen and (max-width: 800px) {
+            .column {
+                flex: 0 1 calc(50% - 16px); /* Adjust columns for tablets */
+                max-width: calc(50% - 16px);
+            }
+        }
+
+        /* Responsive layout for mobile */
+        @media screen and (max-width: 600px) {
+            .column {
+                flex: 0 1 100%; /* Full-width columns for mobile */
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Our Work Section -->
+    <div class="our-work-section" id="our-work">
+        <h2>Our Work</h2>
+        <div class="row">
+            <div class="column">
+                <img src="{{ url_for('static', filename='Images/our_work/11.png') }}" alt="Work Image 1">
+                <img src="{{ url_for('static', filename='Images/our_work/77.png') }}" alt="Work Image 2">
+                <img src="{{ url_for('static', filename='Images/our_work/88.png') }}" alt="Work Image 3">
+            </div>
+            <div class="column">
+                <img src="{{ url_for('static', filename='Images/our_work/33.png') }}" alt="Work Image 5">
+                <img src="{{ url_for('static', filename='Images/our_work/66.png') }}" alt="Work Image 6">
+                <img src="{{ url_for('static', filename='Images/our_work/00.png') }}" alt="Work Image 7">
+
+            </div>
+            <div class="column">
+                <img src="{{ url_for('static', filename='Images/our_work/22.png') }}" alt="Work Image 8">
+                <img src="{{ url_for('static', filename='Images/our_work/55.png') }}" alt="Work Image 9">
+                <img src="{{ url_for('static', filename='Images/our_work/44.png') }}" alt="Work Image 10">
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

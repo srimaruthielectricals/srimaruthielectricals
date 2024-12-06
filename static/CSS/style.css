@@ -1,0 +1,237 @@
+/* ----------NAVBAR-----------------*/
+
+
+/* General reset and box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Body Styles */
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    background-image: url('images/background.jpg'); /* Set a background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #333;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(222, 211, 211, 0.8); /* 80% opacity */
+    ; /* Semi-transparent background */
+    padding: 0px 30px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%; /* Set to full width */
+    margin: 0; /* Remove margin to prevent centering */
+}
+
+/* Logo Container */
+.logo {
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; /* Align logo vertically if needed */
+    margin-left: 70px; /* Adjust as required */
+}
+
+/* Circular Image */
+.circular-image {
+    width: 80px; /* Adjust size */
+    height: 80px; /* Keep width and height equal */
+    border-radius: 50%; /* Makes the image circular */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3), 0 0 25px rgba(0, 123, 255, 0.5); /* Glow effect */
+    object-fit: cover; /* Ensures image covers the circle */
+    border: 2px solid #d7cece; /* Optional white border */
+    margin-right: 10px; /* Adds space between logo and other elements */
+}
+
+/* Remove redundant styling */
+.logo img {
+    margin-right: 0; /* Reset margin if not needed */
+    width: auto; /* Let .circular-image control the size */
+}
+
+.site-name {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.nav-links li {
+    margin: 0 15px; /* Increased margin for better spacing */
+}
+
+.nav-links li a {
+    color: #444; /* Text color */
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif; /* Use Roboto font */
+    font-size: 16px; /* Font size */
+    font-weight: 500; /* Font weight */
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #fff;
+    background-color: #007BFF; /* Background color on hover */
+}
+
+/* Dropdown Styles */
+.nav-links .dropdown {
+    position: relative; /* Positioning context for the dropdown */
+}
+
+.nav-links .dropdown-content {
+    display: none; /* Hidden by default */
+    position: absolute; /* Position it below the dropdown button */
+    background-color: #f9f9f9; /* Background color */
+    min-width: 200px; /* Minimum width */
+    z-index: 1; /* Stack on top */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    border-radius: 5px; /* Rounded corners */
+    margin-top: 5px; /* Space above the dropdown */
+    padding: 0; /* Remove padding if you want content to dictate size */
+}
+
+.nav-links .dropdown-content a {
+    color: black; /* Link color */
+    padding: 10px 15px; /* Padding for the links */
+    text-decoration: none; /* Remove underline */
+    display: block; /* Make links block elements for full width */
+}
+
+/* Add hover effect */
+.nav-links .dropdown-content a:hover {
+    background-color: #f1f1f1; /* Change background on hover */
+}
+
+/* Show dropdown on hover */
+.nav-links .dropdown:hover .dropdown-content {
+    display: block; /* Show dropdown on hover */
+}
+
+
+/* Style the search form */
+.search-tab {
+    display: flex;
+    align-items: center;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.search-form input[type="text"] {
+    border: none;
+    outline: none;
+    padding: 5px;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.search-form button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    padding: 5px;
+}
+
+.search-form button i {
+    font-size: 18px;
+    color: #333;
+}
+
+/* Optional: Adjust margin for spacing */
+.nav-links .search-tab {
+    margin-left: 20px;
+}
+
+
+
+/* Input (Search bar) Styles */
+.search-and-profile input {
+    width: 100%; /* Set to 100% to allow full width */
+    max-width: 600px; /* Increase the maximum width as needed */
+    height: 50px; /* Adjust height */
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-left: 20px; /* Adjust spacing on the left */
+    margin-top: 5px; /* Adjust this value to move the search bar down */
+}
+
+
+
+
+/* ----------Footer  -----------------*/
+
+footer {
+    background-color: #daa5a8;
+    color: #120f0f;
+    padding: 50px 0;
+    text-align: center;
+    width: 100%; /* Ensure full width */
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.footer-link {
+    color: #120f0f;
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    color: #ff7a59;
+    text-decoration: underline;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-links {
+        flex-direction: column; /* Stack items on smaller screens */
+        align-items: center; /* Center align */
+    }
+
+    .footer-link {
+        margin: 5px 0; /* Add space between links */
+    }
+}
+
+
+

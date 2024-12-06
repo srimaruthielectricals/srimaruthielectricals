@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SME Company Website</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="{{ url_for('static', filename='Images/sme_logo.png') }}" alt="Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/#about-us">About Us</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Services</a>
+                <div class="dropdown-content">
+                    <a href="/projects">Residential and Commercial Sectors</a>
+                    <a href="/projects">Transmission Line Projects</a>
+                    <a href="/projects">Sub-station Works and Maintenance</a>
+                </div>
+            </li>
+            <li><a href="/contact">Contact Us</a></li>
+            <!-- Search Tab -->
+            <li class="search-tab">
+                <form action="/search" method="get" class="search-form">
+                    <input type="text" name="query" placeholder="Search..." aria-label="Search" required>
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </form>
+            </li>
+        </ul>
+        
+        <!-- Get Quote Button -->
+        <button style="background-color: #87CEFA; color: white; border: none; padding: 10px 20px; border-radius: 5px; font-size: 16px; cursor: pointer;">
+            Get Quote
+        </button>            
+    </nav>
+
+    
+    {% block content %}
+    
+    {% endblock %}
+    
+
+<!-- Footer Section -->
+<footer style="background-color: #dfbfc0; color: #120f0f; padding: 50px 0; text-align: center; width: 100%;">
+  <h3 style="color: #ff7a59; font-size: 2rem; margin-bottom: 20px;">Sri Maruthi Electricals</h3>
+  <p style="font-size: 1.1rem; color: #0c0a0a; margin-bottom: 40px;">
+    Powering Progress with Expert Electrical Services and Reliable Contracts.
+  </p>
+
+  <div class="footer-links" style="display: flex; justify-content: space-around; flex-wrap: wrap; margin-bottom: 40px;">
+      <div style="flex: 1; min-width: 200px; padding: 10px;">
+          <h4 style="color: #0e0b0b;">Company</h4>
+          <ul style="list-style: none; padding: 0;">
+              <li><a href="/#about-us" class="footer-link">About Us</a></li>
+              <li><a href="career.html" class="footer-link">Careers</a></li>
+              <li><a href="contact.html" class="footer-link">Contact Us</a></li>
+          </ul>
+      </div>
+
+      <div style="flex: 1; min-width: 200px; padding: 10px;">
+          <h4 style="color: #120f0f;">Services</h4>
+          <ul style="list-style: none; padding: 0;">
+              <li><a href="programs.html" class="footer-link">Programs</a></li>
+              <li><a href="workshops.html" class="footer-link">Workshops</a></li>
+              <li><a href="events.html" class="footer-link">Events</a></li>
+          </ul>
+      </div>
+
+      <div style="flex: 1; min-width: 200px; padding: 10px;">
+          <h4 style="color: #0f0c0c;">Follow Us</h4>
+          <ul style="list-style: none; padding: 0;">
+              <li><a href="https://facebook.com" target="_blank" class="footer-link">Linkedin</a></li>
+              <li><a href="https://twitter.com" target="_blank" class="footer-link">Twitter</a></li>
+              <li><a href="https://instagram.com" target="_blank" class="footer-link">Instagram</a></li>
+          </ul>
+      </div>
+  </div>
+
+  <!-- Newsletter Subscription Form -->
+  <section>
+      <form action="">
+          <div class="row d-flex justify-content-center">
+              <div class="col-auto">
+                  <p class="pt-2">
+                      <strong>Sign up for our newsletter</strong>
+                  </p>
+              </div>
+              <div class="col-md-5 col-12">
+                  <div class="form-outline mb-4">
+                      <input type="email" id="form5Example2" class="form-control" />
+                      <label class="form-label" for="form5Example2">Email address</label>
+                  </div>
+              </div>
+              <div class="col-auto">
+                  <button type="submit" class="btn btn-primary mb-4">
+                      Subscribe
+                  </button>
+              </div>
+          </div>
+      </form>
+  </section>
+
+  <p style="color: #999; margin-top: 20px; font-size: 0.9rem;">
+      &copy; 2024 Startup Venture. All rights reserved. | Email: <a href="mailto:info@startupventure.com" style="color: #ff7a59;">info@startupventure.com</a> | Phone: +91-1234-567-890
+  </p>
+</footer>
+</body>
+</html>

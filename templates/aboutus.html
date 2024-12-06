@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        /* Section Styling */
+        .about-us-section {
+            background-color: #f8f9fa; /* Light background color */
+            padding: 50px 20px; /* Space around the content */
+            text-align: center; /* Center-align the section content */
+            border-radius: 10px; /* Rounded corners for the section */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        }
+
+        /* Content Wrapper */
+        .about-us-content {
+            display: flex;
+            flex-wrap: wrap; /* Ensure responsiveness */
+            align-items: center; /* Vertically align items */
+            justify-content: center; /* Center items horizontally */
+            gap: 30px; /* Space between elements */
+        }
+
+        /* Image Styling */
+        .about-us-image {
+            width: 100%;
+            max-width: 300px; /* Constrain the image size */
+            border-radius: 10px; /* Rounded corners for the image */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add a shadow for emphasis */
+            transition: transform 0.3s ease; /* Smooth animation on hover */
+        }
+
+        .about-us-image:hover {
+            transform: scale(1.1); /* Slight zoom effect on hover */
+        }
+
+        /* Grid Content */
+        .grid-content {
+            max-width: 600px; /* Restrict content width */
+            text-align: left; /* Align text to the left */
+        }
+
+        .about-us-title {
+            font-size: 2rem; /* Larger title font */
+            color: #343a40; /* Dark gray color */
+            margin-bottom: 20px; /* Space below the title */
+        }
+
+        .about-text {
+            font-size: 1rem; /* Standard font size */
+            line-height: 1.6; /* Improve readability */
+            color: #555; /* Softer text color */
+        }
+
+        .highlight {
+            color: #007bff; /* Highlighted text in blue */
+            font-weight: bold; /* Bold for emphasis */
+        }
+
+        /* ----------About section  -----------------*/
+
+        /* About Us Section */
+        .about-us-section {
+            background-color: white;
+            padding: 50px 20px;
+            display: flex;
+            align-items: flex-start;
+            width: 100%;
+            max-width: 1270px;
+            margin: 0 auto; /* Center the section */
+            font-family: 'Roboto', sans-serif; /* Ensure consistent font across the section */
+        }
+
+        .about-us-content {
+            flex: 1;
+            display: flex;
+            align-items: flex-start; /* Align items at the start */
+        }
+
+        .about-us-image {
+            width: 100%; /* Adjust image width */
+            height: 280px; /* Fixed height for image */
+            object-fit: cover; /* Maintain aspect ratio */
+            margin-right: 10px; /* Space between image and text */
+            margin-top: 40px; /* Top margin for alignment */
+        }
+
+        .grid-content {
+            flex: 1; /* Allow text container to take available space */
+            margin-left: 20px; /* Space to the left of the text */
+            text-align: left; /* Align text to the left for a better reading experience */
+        }
+
+        .about-us-title {
+            font-size: 2.2rem; /* Title font size */
+            color: #ff7a59; /* Title color */
+            margin-bottom: 10px; /* Space below the title */
+        }
+
+        .about-text {
+            font-size: 1rem; /* Font size for paragraph */
+            color: #555; /* Text color */
+            line-height: 1.4; /* Line height for readability */
+            text-align: justify; /* Justify text alignment */
+        }
+
+        .highlight {
+            color: #ff7a59; /* Highlight color for emphasis */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .about-us-content {
+                flex-direction: column; /* Stack image and text on smaller screens */
+                align-items: center; /* Center align items */
+            }
+
+            .about-us-image {
+                width: 80%; /* Adjust image width for mobile */
+                height: auto; /* Allow height to adjust */
+                margin-top: 20px; /* Space above image on mobile */
+            }
+
+            .grid-content {
+                margin-left: 0; /* Remove margin on mobile */
+                text-align: justify; /* Center text on mobile */
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    {% block content %}
+    <section id="about-us" class="about-us-section">
+        <div class="about-us-content">
+            <img src="{{ url_for('static', filename='Images/front_page.png') }}" alt="Events and Camps" class="about-us-image">
+            <div class="grid-content">
+                <h2 class="about-us-title">About Us</h2>
+                <p class="about-text">
+                    <strong class="highlight">Sri Maruthi Electricals</strong> was established in 1987 with a vision of excellence 
+                    in the electrical industry. Diligence, earnest commitment to meeting client project goals, and timely completion 
+                    have contributed to securing ongoing projects. As the organization expanded, Sri Maruthi Electricals evolved to 
+                    align with the demands of turnkey electrical projects. The board members, complemented by experienced managers, 
+                    engineers, and technicians, oversee the company with a professional touch. The core philosophy of Sri Maruthi 
+                    Electricals revolves around fostering enduring relationships with clients, achieved through the timely completion 
+                    of projects and a steadfast commitment to quality. The company possesses the capability to undertake projects not 
+                    only in Karnataka but also in various other states.
+                </p>
+            </div>
+        </div>
+    </section>
+    {% endblock %}
+</body>
+</html>

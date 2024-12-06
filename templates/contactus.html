@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f5f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .contact-container {
+      background-color: white;
+      border-radius: 15px;
+      padding: 30px;
+      width: 350px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .contact-container h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    .contact-container img {
+      width: 100px;
+      margin-bottom: 20px;
+    }
+    .contact-container p {
+      font-size: 16px;
+      color: #666;
+      margin: 10px 0;
+    }
+    .contact-container .icon-text {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 10px 0;
+    }
+    .contact-container .icon-text img {
+      width: 20px;
+      margin-right: 10px;
+    }
+    .contact-container a {
+      color: #333;
+      text-decoration: none;
+    }
+    .contact-container .footer {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #333;
+    }
+    .close-button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 14px;
+      color: white;
+      background-color: #e4d4d4;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .close-button:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="contact-container">
+    <!-- Logo -->
+    <img src="{{ url_for('static', filename='Images/SME_logo.png') }}" alt="Logo">
+    <h1>Contact Us</h1>
+    <p>SRI MARUTHI ELECTRICALS</p>
+    <!-- Phone -->
+    <div class="icon-text">
+      <img src="{{ url_for('static', filename='Images/contactus/phone.png') }}" alt="Phone Icon">
+      <p>+91-8884908509</p>
+    </div>
+    <!-- Website -->
+    <div class="icon-text">
+      <img src="{{ url_for('static', filename='Images/contactus/website.png') }}" alt="Website Icon">
+      <a href="www.srimaruthielectricals.in" target="_blank">www.srimaruthielectricals.in</a>
+    </div>
+    <!-- Email -->
+    <div class="icon-text">
+      <img src="{{ url_for('static', filename='Images/contactus/email.png') }}" alt="Email Icon">
+      <a href="mailto:sriimaruthielectricals@gmail.com">sriimaruthielectricals@gmail.com</a>
+    </div>
+    <!-- Address -->
+    <div class="icon-text">
+      <img src="{{ url_for('static', filename='Images/contactus/address.png') }}" alt="Location Icon">
+      <p>Margarosa Road Malleshwaram</p>
+    </div>
+    <!-- Footer -->
+    <p class="footer">CONNECT WITH US!</p>
+    <!-- Close Button -->
+    <a href="/" class="close-button">Close</a>
+  </div>
+</body>
+</html>

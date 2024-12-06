@@ -62,12 +62,10 @@
 
         <div class="image-slider">
             <!-- Image slides for the slider -->
-            <div class="slide" style="background-image: url('{{ url_for('static', filename='Images/moving_images/purvankar.png') }}');"></div>
-            <div class="slide" style="background-image: url('{{ url_for('static', filename='Images/moving_images/substation_works.png') }}');"></div>
-            <div class="slide" style="background-image: url('{{ url_for('static', filename='Images/moving_images/Aparments.png') }}');"></div>
-            <div class="slide" style="background-image: url('{{ url_for('static', filename='Images/moving_images/Line_works.png') }}');"></div>
-            <div class="slide" style="background-image: url('{{ url_for('static', filename='Images/moving_images/Provident.png') }}');"></div>
-
+            <div class="slide" style="background-image: url('/static/Images/substation_works.png');"></div>
+            <div class="slide" style="background-image: url('/static/Images/Aparments.png');"></div>
+            <div class="slide" style="background-image: url('/static/Images/Line_works.png');"></div>
+            <div class="slide" style="background-image: url('/static/Images/Provident.png');"></div>
         </div>
     </div>
     {% endblock %}

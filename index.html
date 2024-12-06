@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SME Company Website</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/style.css') }}">
+    <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
@@ -12,28 +12,26 @@
     <!-- Navigation bar -->
     <nav class="navbar">
         <div class="logo">
-            <img src="{{ url_for('static', filename='Images/SME_logo.png') }}" alt="Logo" class="circular-image">
+            <img src="./static/Images/SME_logo.png" alt="Logo" class="circular-image">
         </div>
-        
         <ul class="nav-links">
             <li><a href="/">Home</a></li>
             <li><a href="/#about-us">About Us</a></li>
+            <!-- Dropdown for Services -->
             <li class="dropdown">
-                <a href="#" class="dropbtn">Services</a>
+                <a href="/learnmore">Services</a>
                 <div class="dropdown-content">
-                    <a href="{{ url_for('learnmore') }}#section1" >Residential and Commercial Sectors</a>
-                    <a href="{{ url_for('learnmore') }}#section2" >Transmission Line Projects</a>
-                    <a href="{{ url_for('learnmore') }}#section3" >Sub-station Works and Maintenance</a>
-
+                    <a href="learnmore#section1">Residential and Commercial Sectors</a>
+                    <a href="learnmore#section2">Transmission Line Projects</a>
+                    <a href="learnmore#section3">Sub-station Works and Maintenance</a>
                 </div>
             </li>
-            <li><a href="{{ url_for('contactus') }}">Contact Us</a></li>
+            <li><a href="contactus">Contact Us</a></li>
         </ul>
-                   
     </nav>
-
-    <!-- Body Content (from templates) -->
     
+
+    <!-- Body Content -->
     {% include 'image_slide.html' %}
     {% include 'services.html' %}
     {% include 'our_work.html' %}
@@ -41,10 +39,7 @@
     {% include 'milestone.html' %}
     {% include 'aboutus.html' %}
 
-    
-    
-
-    <!-- Footer Section (from homepage_navbar_footer.html) -->
+    <!-- Footer Section -->
     <footer style="background-color: #dfbfc0; color: #120f0f; padding: 50px 0; text-align: center; width: 100%;">
         <h3 style="color: #ff7a59; font-size: 2rem; margin-bottom: 20px;">Sri Maruthi Electricals</h3>
         <p style="font-size: 1.1rem; color: #0c0a0a; margin-bottom: 40px;">
@@ -56,17 +51,17 @@
                 <h4 style="color: #0e0b0b;">Company</h4>
                 <ul style="list-style: none; padding: 0;">
                     <li><a href="/#about-us" class="footer-link">About Us</a></li>
-                    <li><a href="{{ url_for('carrers') }}" class="footer-link">Careers</a></li>
-                    <li><a href="{{ url_for('contactus') }}" class="footer-link">Contact Us</a></li>
+                    <li><a href="carrers" class="footer-link">Careers</a></li>
+                    <li><a href="contactus" class="footer-link">Contact Us</a></li>
                 </ul>
             </div>
 
             <div style="flex: 1; min-width: 200px; padding: 10px;">
                 <h4 style="color: #120f0f;">Services</h4>
                 <ul style="list-style: none; padding: 0;">
-                    <li><a href="{{ url_for('learnmore') }}#section1" class="footer-link">Residential and Commercial Sectors</a></li>
-                    <li><a href="{{ url_for('static', filename='Images/transmission.png') }}" class="footer-link" >Transmission Line Projects</a></li>
-                    <li><a href="{{ url_for('static', filename='Images/substation.png') }}" class="footer-link" >Sub-station Works and Maintenance</a></li>
+                    <li><a href="learnmore#section1" class="footer-link">Residential and Commercial Sectors</a></li>
+                    <li><a href="learnmore#section1" class="footer-link" >Transmission Line Projects</a></li>
+                    <li><a href="learnmore#section1" class="footer-link" >Sub-station Works and Maintenance</a></li>
                     
                 </ul>
             </div>

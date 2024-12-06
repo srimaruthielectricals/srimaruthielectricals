@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Residential and Commercial Sectors</title>
+    <style>
+        /* General section style */
+        .section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px 20px;
+            background-color: #f4f4f4;
+            font-family: 'Roboto', sans-serif; /* Ensure consistent font across the section */
+            margin-bottom: 40px;
+        }
+
+        /* Title Style */
+        .section h1 {
+            font-size: 2.5rem;
+            color: #ff7a59;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        /* Left content (Text) */
+        .section .content {
+            width: 50%;
+        }
+
+        /* List styling */
+        .section ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        /* Image style */
+        .section .image img {
+            width: 500px;
+            max-width: 500px;
+            height: 500px;
+            border-radius: 8px;
+        }
+
+        /* To alternate image position */
+        .section.reverse {
+            flex-direction: row-reverse;
+        }
+
+        /* Back Home Button Style */
+        .back-home-btn {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            color: #fff;
+            background-color: #ff7a59;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        .back-home-btn:hover {
+            background-color: #e66e4d;
+        }
+    </style>
+</head>
+<body>
+
+
+    <!-- Section 1 -->
+    <div class="section" id="section1">
+        <div class="content">
+            <h1>RESIDENTIAL AND COMMERCIAL SECTORS</h1>
+            <p>With a focus on quality, safety, and efficiency, our comprehensive services cater to both residential and commercial sectors.</p>
+            <ul>
+                <li>Successful erection work for high-rise residential buildings, demonstrating proficiency in complex electrical installations.</li>
+                <li>Power transformers service and testing, HT/LT panel service and testing, Power cable wiring, testing and tracing, Fault finding of electrical systems.</li>
+                <li>Installation of lighting systems, alarms, and switchboards.</li>
+                <li>Turnkey installations, alterations, and ongoing maintenance.</li>
+                <li>Specialized services for industrial plant environments.</li>
+                <li>Diverse installations in offices, factories, showrooms, and more.</li>
+            </ul>
+        </div>
+
+        <div class="image">
+            <img src="./static/Images/Ganga_heights.png" alt="Residential and Commercial Sectors">
+        </div>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="section reverse" id="section2">
+        <div class="content">
+            <h1>TRANSMISSION LINE PROJECTS</h1>
+            <p>Providing complete turnkey solutions for transmission lines up to 25KVA for several projects. Work included providing line materials RCC/PSC/Spun poles, transformers, bolts & nuts and tower accessories, cable hardware, insulators, and earth materials.</p>
+            <ul>
+                <li>Replacement of Rail/Iron poles by RCC/PSC/Spun DPTS structure poles/Local - Planning/Safety works & other emergency works at various locations.</li>
+                <li>Providing evacuation of 11kV new feeders and link line.</li>
+                <li>Providing infrastructure to the regularized unauthorized IP, on rate contract.</li>
+                <li>Erection of BEE-3 star rated 25KVA distributed transformer.</li>
+                <li>Construction of LT line 3-phase 4 wire on partial turnkey basis.</li>
+            </ul>
+        </div>
+
+        <div class="image">
+            <img src="./static/Images/transmission.png" alt="Transmission Line Projects">
+        </div>
+    </div>
+
+    <!-- Section 3 -->
+    <div class="section" id="section3">
+        <div class="content">
+            <h1>SUB-STATION WORKS AND MAINTENANCE</h1>
+            <p>Providing installation and commissioning for substation projects up to 8MVA. Encompassing survey, supply contract materials, detailed soil investigation, foundation construction, tower erection, conductor stringing, and line testing & commissioning.</p>
+            <ul>
+                <li>Site leveling, Construction of RCC cable ducts.</li>
+                <li>Erection of 8MVA Transformer.</li>
+                <li>Road works, Switch yard fencing, Storm drainage system, Building retaining walls, Providing rainwater harvesting for buildings.</li>
+                <li>Foundation to station structures and equipment support, Electrical cabling and cable bridge.</li>
+                <li>PLCC & SCADA installation.</li>
+                <li>Providing man-power for carrying out shift duties, minor maintenance, and housekeeping works on temporary/regular basis at the following 66/11 kV sub-stations.</li>
+            </ul>
+        </div>
+
+        <div class="image">
+            <img src="./static/Images/substation.png" alt="Substation Works and Maintenance">
+        </div>
+    </div>
+
+    <!-- Back Home Button -->
+    <button class="back-home-btn" onclick="window.location.href='/'">Back Home</button>
+
+</body>
+</html>

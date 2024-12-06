@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SME Company Website</title>
     <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/image_style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
@@ -30,9 +31,18 @@
         </ul>
     </nav>
     
+    <div class="hero-container">
 
+        <div class="image-slider">
+            <!-- Image slides for the slider -->
+            <div class="slide" style="background-image: url('/static/Images/substation_works.png');"></div>
+            <div class="slide" style="background-image: url('/static/Images/Aparments.png');"></div>
+            <div class="slide" style="background-image: url('/static/Images/Line_works.png');"></div>
+            <div class="slide" style="background-image: url('/static/Images/Provident.png');"></div>
+        </div>
+    </div>
+    
     <!-- Body Content -->
-    {% include 'image_slide.html' %}
     {% include 'services.html' %}
     {% include 'our_work.html' %}
     {% include 'client_company_logo.html' %}

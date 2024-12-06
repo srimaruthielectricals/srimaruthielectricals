@@ -8,56 +8,177 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
+        /* Navigation bar styling */
+        .navbar {
+            background-color: #333;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
 
+        .navbar .logo img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
 
-        /* First Section */
-    .hero-container {
-        position: relative;
-        height: 80vh;
-        width: 100%;
-        max-width: 85%; /* Set a max-width less than 100% */
-        margin: 0 auto;  /* Center it */
-        overflow: hidden;
-    }
+        .navbar .nav-links {
+            list-style: none;
+            display: flex;
+        }
 
+        .navbar .nav-links li {
+            margin: 0 15px;
+        }
 
-    .image-slider {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 1;
-    }
+        .navbar .nav-links li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
 
-    .slide {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-size: cover;
-        background-position: center;
-        opacity: 0;
-        transition: opacity 1s ease-in-out;
-        border-radius: 30px; /* Increased value for more pronounced curves */
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Optional: soft shadow for depth */
-    }
+        .navbar .nav-links li a:hover {
+            color: #ff7a59;
+        }
 
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            min-width: 160px;
+            z-index: 1;
+        }
 
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
 
-    .slide:nth-child(1) { animation: fade 25s infinite; }
-    .slide:nth-child(2) { animation: fade 25s infinite 5s; }
-    .slide:nth-child(3) { animation: fade 25s infinite 10s; }
-    .slide:nth-child(4) { animation: fade 25s infinite 15s; }
-    .slide:nth-child(5) { animation: fade 25s infinite 20s; }
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
 
-    @keyframes fade {
-        0% { opacity: 1; }
-        20% { opacity: 1; }
-        25% { opacity: 0; }
-        100% { opacity: 0; }
-    }
+        .dropdown-content a:hover {
+            background-color: #575757;
+        }
 
-</style>
+        /* Hero section styling */
+        .hero-container {
+            position: relative;
+            height: 80vh;
+            width: 100%;
+            max-width: 85%;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .image-slider {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            border-radius: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .slide:nth-child(1) { animation: fade 25s infinite; }
+        .slide:nth-child(2) { animation: fade 25s infinite 5s; }
+        .slide:nth-child(3) { animation: fade 25s infinite 10s; }
+        .slide:nth-child(4) { animation: fade 25s infinite 15s; }
+
+        @keyframes fade {
+            0% { opacity: 1; }
+            20% { opacity: 1; }
+            25% { opacity: 0; }
+            100% { opacity: 0; }
+        }
+
+        /* Footer styling */
+        footer {
+            background-color: #dfbfc0;
+            color: #120f0f;
+            padding: 50px 0;
+            text-align: center;
+            width: 100%;
+        }
+
+        footer h3 {
+            color: #ff7a59;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        footer p {
+            font-size: 1.1rem;
+            color: #0c0a0a;
+            margin-bottom: 40px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .footer-links div {
+            flex: 1;
+            min-width: 200px;
+            padding: 10px;
+        }
+
+        .footer-links h4 {
+            color: #0e0b0b;
+        }
+
+        .footer-links ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links a {
+            color: #0c0a0a;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        .footer-links a:hover {
+            color: #ff7a59;
+        }
+
+        footer .footer-links a {
+            margin-bottom: 10px;
+        }
+
+        footer p {
+            color: #999;
+            margin-top: 20px;
+            font-size: 0.9rem;
+        }
+
+        footer p a {
+            color: #ff7a59;
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation bar -->
@@ -68,7 +189,6 @@
         <ul class="nav-links">
             <li><a href="/">Home</a></li>
             <li><a href="/#about-us">About Us</a></li>
-            <!-- Dropdown for Services -->
             <li class="dropdown">
                 <a href="/learnmore">Services</a>
                 <div class="dropdown-content">
@@ -81,10 +201,9 @@
         </ul>
     </nav>
     
+    <!-- Hero Section with Image Slider -->
     <div class="hero-container">
-
         <div class="image-slider">
-            <!-- Image slides for the slider -->
             <div class="slide" style="background-image: url('/static/Images/substation_works.png');"></div>
             <div class="slide" style="background-image: url('/static/Images/Aparments.png');"></div>
             <div class="slide" style="background-image: url('/static/Images/Line_works.png');"></div>
@@ -101,46 +220,40 @@
     {% include 'aboutus.html' %}
 
     <!-- Footer Section -->
-    <footer style="background-color: #dfbfc0; color: #120f0f; padding: 50px 0; text-align: center; width: 100%;">
-        <h3 style="color: #ff7a59; font-size: 2rem; margin-bottom: 20px;">Sri Maruthi Electricals</h3>
-        <p style="font-size: 1.1rem; color: #0c0a0a; margin-bottom: 40px;">
-            Powering Progress with Expert Electrical Services and Reliable Contracts.
-        </p>
+    <footer>
+        <h3>Sri Maruthi Electricals</h3>
+        <p>Powering Progress with Expert Electrical Services and Reliable Contracts.</p>
 
-        <div class="footer-links" style="display: flex; justify-content: space-around; flex-wrap: wrap; margin-bottom: 40px;">
-            <div style="flex: 1; min-width: 200px; padding: 10px;">
-                <h4 style="color: #0e0b0b;">Company</h4>
-                <ul style="list-style: none; padding: 0;">
-                    <li><a href="/#about-us" class="footer-link">About Us</a></li>
-                    <li><a href="carrers" class="footer-link">Careers</a></li>
-                    <li><a href="contactus" class="footer-link">Contact Us</a></li>
+        <div class="footer-links">
+            <div>
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="/#about-us">About Us</a></li>
+                    <li><a href="carrers">Careers</a></li>
+                    <li><a href="contactus">Contact Us</a></li>
                 </ul>
             </div>
 
-            <div style="flex: 1; min-width: 200px; padding: 10px;">
-                <h4 style="color: #120f0f;">Services</h4>
-                <ul style="list-style: none; padding: 0;">
-                    <li><a href="learnmore#section1" class="footer-link">Residential and Commercial Sectors</a></li>
-                    <li><a href="learnmore#section1" class="footer-link" >Transmission Line Projects</a></li>
-                    <li><a href="learnmore#section1" class="footer-link" >Sub-station Works and Maintenance</a></li>
-                    
+            <div>
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="learnmore#section1">Residential and Commercial Sectors</a></li>
+                    <li><a href="learnmore#section2">Transmission Line Projects</a></li>
+                    <li><a href="learnmore#section3">Sub-station Works and Maintenance</a></li>
                 </ul>
             </div>
 
-            <div style="flex: 1; min-width: 200px; padding: 10px;">
-                <h4 style="color: #0f0c0c;">Follow Us</h4>
-                <ul style="list-style: none; padding: 0;">
-                    <li><a href="/" target="_blank" class="footer-link">Linkedin</a></li>
-                    <li><a href="/" target="_blank" class="footer-link">Twitter</a></li>
-                    <li><a href="/" target="_blank" class="footer-link">Instagram</a></li>
+            <div>
+                <h4>Follow Us</h4>
+                <ul>
+                    <li><a href="/" target="_blank">Linkedin</a></li>
+                    <li><a href="/" target="_blank">Twitter</a></li>
+                    <li><a href="/" target="_blank">Instagram</a></li>
                 </ul>
             </div>
         </div>
 
-
-        <p style="color: #999; margin-top: 20px; font-size: 0.9rem;">
-            &copy; 2024 Sri Maruthi Electricals. All rights reserved. | Email: <a href="mailto:sriimaruthielectricals@gmail.com" style="color: #ff7a59;">srimaruthielectricals@gmail.com</a> | Phone: +91-8884908509
-        </p>
+        <p>&copy; 2024 Sri Maruthi Electricals. All rights reserved. | Email: <a href="mailto:sriimaruthielectricals@gmail.com">srimaruthielectricals@gmail.com</a> | Phone: +91-8884908509</p>
     </footer>
 </body>
 </html>

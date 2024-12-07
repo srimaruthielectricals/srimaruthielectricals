@@ -61,6 +61,8 @@ if __name__ == '__main__':
 ### Step 4: Run the Application
 
 ```bash
+source maruthi/bin/activate
+
 python app.py
 
 

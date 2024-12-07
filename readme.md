@@ -9,6 +9,8 @@ This repository contains the website for Sri Maruthi Electricals, designed to sh
 - `index.html`: The main entry point for the website, representing the home page.
 - `contactus.html`: The "Contact Us" page for inquiries.
 - `carrer.html`: The "Careers" page with job opportunities.
+- `learnmore.html`: The "servies" page detailed explanation.
+
 
 ### Folders
 #### `static/images`

@@ -1,10 +1,9 @@
-
 /* Global Font Style */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap'); /* Import Roboto font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 body {
-    font-family: 'Roboto', sans-serif; /* Apply Roboto font globally */
-    color: #333; /* Set primary text color */
+    font-family: 'Roboto', sans-serif;
+    color: #333;
     margin: 0;
     padding: 0;
 }
@@ -17,10 +16,10 @@ body {
 }
 
 .milestones-section h2 {
-    font-size: 28px; /* Heading font size */
-    font-weight: 700; /* Bold heading */
+    font-size: 28px;
+    font-weight: 700;
     margin-bottom: 30px;
-    color: #003366; /* Example heading color */
+    color: #003366;
 }
 
 .milestones-container {
@@ -29,7 +28,7 @@ body {
     flex-wrap: wrap;
     max-width: 1200px;
     margin: 0 auto;
-    align-items: stretch; /* Ensure all cards stretch to the same height */
+    align-items: stretch;
 }
 
 .milestone {
@@ -40,7 +39,7 @@ body {
     margin: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Keep the arrow and content aligned */
+    justify-content: space-between;
     text-align: center;
 }
 
@@ -66,20 +65,41 @@ body {
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    flex-grow: 1; /* Ensures equal height for content */
+    flex-grow: 1;
     display: flex;
-    align-items: center; /* Center text vertically */
-    justify-content: center; /* Center text horizontally */
-    text-align: justify; /* Ensures text spans evenly across the width */
-    min-height: 150px; /* Minimum consistent height */
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    min-height: 150px;
 }
 
 .milestone-content p {
     font-size: 16px;
     color: #555;
-    line-height: 1.6; /* Adjust spacing between lines */
-    margin: 0; /* Remove extra space above and below text */
-    padding: 0; /* Remove internal padding */
-    text-align: justify; /* Spread the text evenly across the width */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
 }
 
+/* Responsive Adjustments for Milestones Section */
+@media (max-width: 768px) {
+    .milestones-container {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center-align items */
+    }
+
+    .milestone {
+        max-width: 100%; /* Allow full-width for milestones */
+        flex: 1 0 auto; /* Ensure milestones take up available space */
+    }
+
+    .milestone-arrow {
+        font-size: 18px; /* Reduce font size for smaller screens */
+        padding: 10px 15px; /* Adjust padding */
+    }
+
+    .milestone-content {
+        min-height: 120px; /* Reduce minimum height for content */
+        font-size: 14px; /* Adjust font size */
+    }
+}

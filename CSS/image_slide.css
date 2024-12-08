@@ -48,3 +48,13 @@
     100% { opacity: 0; }
 }
 
+
+@media (max-width: 768px) {
+    .hero-container {
+        height: 50vh;
+        margin: 10px auto;
+    }
+    .image-slider {
+        height: 100%;
+    }
+}

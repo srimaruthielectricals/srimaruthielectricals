@@ -236,3 +236,39 @@ footer {
 
 
 
+
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+    .navbar {
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+    .nav-links.show {
+        display: flex;
+    }
+    .nav-links li {
+        margin: 10px 0;
+    }
+    .logo img {
+        width: 60px;
+    }
+    .hero-container {
+        height: 50vh;
+        margin: 10px auto;
+    }
+    .image-slider {
+        height: 100%;
+    }
+    .footer-links {
+        flex-direction: column;
+        text-align: center;
+    }
+}

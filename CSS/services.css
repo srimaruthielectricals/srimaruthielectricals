@@ -116,3 +116,13 @@
     }
 }
 
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    .grid-item {
+        margin-bottom: 20px;
+    }
+}

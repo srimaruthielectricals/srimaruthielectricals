@@ -124,3 +124,16 @@
 }
 
 
+
+@media (max-width: 768px) {
+    .about-us-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .about-us-image {
+        width: 90%;
+    }
+    .grid-content {
+        text-align: justify;
+    }
+}
